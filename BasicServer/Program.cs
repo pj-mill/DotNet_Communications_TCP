@@ -63,7 +63,7 @@ namespace BasicServer
                 sb = new StringBuilder();
                 try
                 {
-                    // Read messages in chunks of 1024 bytes
+                    // Read messages in 10 byte chunks
                     do
                     {
                         byte[] chunks = new byte[readByteSize];
