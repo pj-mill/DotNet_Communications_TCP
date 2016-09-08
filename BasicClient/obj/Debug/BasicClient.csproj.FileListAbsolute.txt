@@ -1,0 +1,6 @@
+C:\Apps\Published\CSharp_Communications_TCP\BasicClient\bin\Debug\BasicClient.exe.config
+C:\Apps\Published\CSharp_Communications_TCP\BasicClient\bin\Debug\BasicClient.exe
+C:\Apps\Published\CSharp_Communications_TCP\BasicClient\bin\Debug\BasicClient.pdb
+C:\Apps\Published\CSharp_Communications_TCP\BasicClient\obj\Debug\BasicClient.csprojResolveAssemblyReference.cache
+C:\Apps\Published\CSharp_Communications_TCP\BasicClient\obj\Debug\BasicClient.exe
+C:\Apps\Published\CSharp_Communications_TCP\BasicClient\obj\Debug\BasicClient.pdb
