@@ -1,6 +1,6 @@
 C:\Apps\Published\CSharp_Communications_TCP\BasicServer\bin\Debug\BasicServer.exe.config
 C:\Apps\Published\CSharp_Communications_TCP\BasicServer\bin\Debug\BasicServer.exe
 C:\Apps\Published\CSharp_Communications_TCP\BasicServer\bin\Debug\BasicServer.pdb
-C:\Apps\Published\CSharp_Communications_TCP\BasicServer\obj\Debug\BasicServer.csprojResolveAssemblyReference.cache
 C:\Apps\Published\CSharp_Communications_TCP\BasicServer\obj\Debug\BasicServer.exe
 C:\Apps\Published\CSharp_Communications_TCP\BasicServer\obj\Debug\BasicServer.pdb
+C:\Apps\Published\CSharp_Communications_TCP\BasicServer\obj\Debug\BasicServer.csprojResolveAssemblyReference.cache

@@ -22,7 +22,7 @@ namespace BasicServer
              * Vars
              * --------------------------------------------------------------------*/
             TcpListener server;
-            Socket client;
+            TcpClient client;
             NetworkStream stream = null;
             IPAddress localhost = IPAddress.Parse("127.0.0.1");
             int port = 43000;
@@ -54,42 +54,42 @@ namespace BasicServer
             while (!done)
             {
                 Console.WriteLine("Waiting for a connection...");
+
                 // Socket that manages the connection to the client (blocks code execution until a client joins)
-                client = server.AcceptSocket();
-
-                // Client joined
-                Console.WriteLine("\nConnection accepted.");
-                stream = new NetworkStream(client);
-                sb = new StringBuilder();
-                try
+                using (client = server.AcceptTcpClient())
                 {
-                    // Read messages in 10 byte chunks
-                    do
+                    // Client joined
+                    Console.WriteLine("\nConnection accepted.");
+                    using (stream = client.GetStream())
                     {
-                        byte[] chunks = new byte[readByteSize];
-                        bytesToRead = stream.Read(chunks, 0, chunks.Length);
-                        sb.Append(Encoding.UTF8.GetString(chunks));
-                    }
-                    while (bytesToRead != 0);
+                        sb = new StringBuilder();
+                        try
+                        {
+                            // Read messages in 10 byte chunks
+                            do
+                            {
+                                byte[] chunks = new byte[readByteSize];
+                                bytesToRead = stream.Read(chunks, 0, chunks.Length);
+                                sb.Append(Encoding.UTF8.GetString(chunks));
+                            }
+                            while (bytesToRead != 0);
 
-                    // Output the entire messsage when done.
-                    string msg = sb.ToString().Trim();
-                    Console.WriteLine(msg);
+                            // Output the entire messsage when done.
+                            string msg = sb.ToString().Trim();
+                            Console.WriteLine(msg);
 
-                    // Close connection if instructed to.
-                    if (msg.Contains("close"))
-                    {
-                        done = true;
+                            // Close connection if instructed to.
+                            if (msg.Contains("close"))
+                            {
+                                done = true;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-                // Tidy up
-                stream.Close();
-                client.Close();
             }
 
 
