@@ -1,0 +1,16 @@
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\bin\Debug\WpfImageReceiver.exe.config
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\bin\Debug\WpfImageReceiver.exe
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\bin\Debug\WpfImageReceiver.pdb
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\bin\Debug\WpfCommon.dll
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\bin\Debug\WpfCommon.pdb
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver.csprojResolveAssemblyReference.cache
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\Views\ImageView.g.cs
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\App.g.cs
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver_MarkupCompile.cache
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver_MarkupCompile.lref
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\Views\ImageView.baml
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver.g.resources
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver.Properties.Resources.resources
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver.csproj.GenerateResource.Cache
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver.exe
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageReceiver\obj\Debug\WpfImageReceiver.pdb

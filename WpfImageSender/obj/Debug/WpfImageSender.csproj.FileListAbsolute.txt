@@ -1,0 +1,16 @@
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender.csprojResolveAssemblyReference.cache
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\Views\ImageView.g.cs
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\App.g.cs
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender_MarkupCompile.cache
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender_MarkupCompile.lref
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\bin\Debug\WpfImageSender.exe.config
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\bin\Debug\WpfImageSender.exe
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\bin\Debug\WpfImageSender.pdb
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\bin\Debug\WpfCommon.dll
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\bin\Debug\WpfCommon.pdb
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\Views\ImageView.baml
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender.g.resources
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender.Properties.Resources.resources
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender.csproj.GenerateResource.Cache
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender.exe
+C:\Apps\Published\CSharp_Communications_TCP\WpfImageSender\obj\Debug\WpfImageSender.pdb

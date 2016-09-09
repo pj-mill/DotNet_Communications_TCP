@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfImageReceiver.Views.ImageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfImageReceiver.Views"
+        xmlns:common="clr-namespace:WpfCommon.Converters;assembly=WpfCommon"
+        mc:Ignorable="d"
+        Title="Receiver" 
+        Height="500" 
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <common:ImageToBitmapImageConverter x:Key="imgConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Image x:Name="imgReceiverImage" Source="{Binding Path=ReceiverImage,Converter={StaticResource imgConverter}}"/>
+    </Grid>
+</Window>

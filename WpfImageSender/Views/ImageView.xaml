@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfImageSender.Views.ImageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfImageSender.Views"
+        mc:Ignorable="d"
+        Title="Sender" 
+        Height="600" 
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblIPAddress" Content="IP Address" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtIPAddress" HorizontalAlignment="Left" Height="23" Margin="122,12,0,0" TextWrapping="Wrap" Text="{Binding Path=IPAddress}" VerticalAlignment="Top" Width="199" IsReadOnly="True"/>
+        <Button x:Name="btnOpen" Cursor="Hand" Content="Open" HorizontalAlignment="Left" Margin="21,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Command="{Binding OpenImageFileDialogCommand}"/>
+        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Height="23" Margin="122,9,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Path=ImageFilePath}" VerticalAlignment="Top" Width="660" IsReadOnly="True"/>
+        <Image Name="imgCurrent" Grid.Row="2" Source="{Binding Path=ImageFilePath}"/>
+        <Button x:Name="btnSend" Cursor="Hand" Content="Send" HorizontalAlignment="Right" Margin="10" Grid.Row="3" VerticalAlignment="Center" Width="100" Command="{Binding SendImageCommand}"/>
+
+    </Grid>
+</Window>
