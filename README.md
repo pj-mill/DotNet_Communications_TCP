@@ -10,10 +10,10 @@ Developed with Visual Studio 2015 Community
 ###DOT NET Features
 |Comms|WPF|Streaming|Misc|
 |-------|----------|------------------------------|------|
-|TcpListener|MVVM||BinaryWriter| |
-|TcpClient|ValueConverters|NetworkStream|Dns| |
+|TcpListener|MVVM|BinaryWriter|Image |
+|TcpClient|ValueConverters|NetworkStream|| BitmapImage|
 |IPAddress|Custom Relay Commands (ICommand)|BufferedStream|StringBuilder|
-|||MemoryStream|
+|Dns|INotifyPropertyChanged|MemoryStream| |
 
 ---
 
