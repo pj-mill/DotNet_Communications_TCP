@@ -7,13 +7,34 @@ Developed with Visual Studio 2015 Community
 
 ---
 
-###DOT NET Features
+####Console Apps
+
+The console apps simply demonstrate sending text from TcpClient to TcpListener. The example sends 3 messages every second, the third instructs the listener to close.
+
+|Sender App| Receiver App|
+|----------|-------------|
+|[BasicClient](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/BasicClient/Program.cs)|[BasicServer](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/BasicServer/Program.cs)|
+
+---
+
+####Wpf Apps
+
+The WPF apps allow you to open an image using 'OpenFileDialog' and display it on the 'senders' view. This view contains a 'send' button that sends the image to the receiver who then displays the image on it's view.
+
+|Sender App| Receiver App|
+|----------|-------------|
+|[WpfImageSender](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/WpfImageSender/ViewModels/ImageViewModel.cs)|[WpfImageReceiver](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/WpfImageReceiver/ViewModels/ImageViewModel.cs)|
+
+
+---
+
+###DOT NET Classes
 |Comms|WPF|Streaming|Misc|
 |-------|----------|------------------------------|------|
 |TcpListener|MVVM|BinaryWriter|Image |
 |TcpClient|ValueConverters|NetworkStream|BitmapImage|
 |IPAddress|Custom Relay Commands (ICommand)|BufferedStream|StringBuilder|
-|Dns|INotifyPropertyChanged|MemoryStream|Threading|
+|Dns|INotifyPropertyChanged|MemoryStream|Thread|
 
 ---
 
