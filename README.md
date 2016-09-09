@@ -8,11 +8,12 @@ Developed with Visual Studio 2015 Community
 ---
 
 ###DOT NET Features
-|-------|----------|------------------------------|
-|TcpListener|MVVM|Custom Relay Commands (ICommand)|
-|TcpClient|ValueConverters|Dns|
-|NetworkStream|StringBuilder|BinaryWriter|
-|BufferedStream|IPAddress|MemoryStream|
+|Comms|WPF|Streaming|Misc|
+|-------|----------|------------------------------|------|
+|TcpListener|MVVM||BinaryWriter| |
+|TcpClient|ValueConverters|NetworkStream|Dns| |
+|IPAddress|Custom Relay Commands (ICommand)|BufferedStream|StringBuilder|
+|||MemoryStream|
 
 ---
 
