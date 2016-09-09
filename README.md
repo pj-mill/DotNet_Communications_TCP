@@ -11,9 +11,9 @@ Developed with Visual Studio 2015 Community
 |Comms|WPF|Streaming|Misc|
 |-------|----------|------------------------------|------|
 |TcpListener|MVVM|BinaryWriter|Image |
-|TcpClient|ValueConverters|NetworkStream|| BitmapImage|
+|TcpClient|ValueConverters|NetworkStream|BitmapImage|
 |IPAddress|Custom Relay Commands (ICommand)|BufferedStream|StringBuilder|
-|Dns|INotifyPropertyChanged|MemoryStream| |
+|Dns|INotifyPropertyChanged|MemoryStream|Threading|
 
 ---
 
