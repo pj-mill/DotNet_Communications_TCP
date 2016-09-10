@@ -21,7 +21,7 @@ namespace BasicServer
             /*-----------------------------------------------------------------------
              * Vars
              * --------------------------------------------------------------------*/
-            TcpListener server;
+            TcpListener server = null;
             TcpClient client;
             NetworkStream stream = null;
             IPAddress localhost = IPAddress.Parse("127.0.0.1");
@@ -40,65 +40,65 @@ namespace BasicServer
                 server = new TcpListener(localhost, port);
                 server.Start();
                 Console.WriteLine($"Server has started on {localhost}:{port}");
+
+                /*-----------------------------------------------------------------------
+                * Listen for clients on network
+                * --------------------------------------------------------------------*/
+                while (!done)
+                {
+                    Console.WriteLine("Waiting for a connection...");
+
+                    // Socket that manages the connection to the client (blocks code execution until a client joins)
+                    using (client = server.AcceptTcpClient())
+                    {
+                        // Client joined
+                        Console.WriteLine("\nConnection accepted.");
+                        using (stream = client.GetStream())
+                        {
+                            sb = new StringBuilder();
+                            try
+                            {
+                                // Read messages in 10 byte chunks
+                                do
+                                {
+                                    byte[] chunks = new byte[readByteSize];
+                                    bytesToRead = stream.Read(chunks, 0, chunks.Length);
+                                    sb.Append(Encoding.UTF8.GetString(chunks));
+                                }
+                                while (bytesToRead != 0);
+
+                                // Output the entire messsage when done.
+                                string msg = sb.ToString().Trim();
+                                Console.WriteLine(msg);
+
+                                // Close connection if instructed to.
+                                if (msg.Contains("close"))
+                                {
+                                    done = true;
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                            }
+                        }
+                    }
+                }
             }
             catch (Exception)
             {
                 Console.WriteLine("Unable to connect server");
                 return;
             }
-
-
-            /*-----------------------------------------------------------------------
-             * Listen for clients on network
-             * --------------------------------------------------------------------*/
-            while (!done)
+            finally
             {
-                Console.WriteLine("Waiting for a connection...");
-
-                // Socket that manages the connection to the client (blocks code execution until a client joins)
-                using (client = server.AcceptTcpClient())
-                {
-                    // Client joined
-                    Console.WriteLine("\nConnection accepted.");
-                    using (stream = client.GetStream())
-                    {
-                        sb = new StringBuilder();
-                        try
-                        {
-                            // Read messages in 10 byte chunks
-                            do
-                            {
-                                byte[] chunks = new byte[readByteSize];
-                                bytesToRead = stream.Read(chunks, 0, chunks.Length);
-                                sb.Append(Encoding.UTF8.GetString(chunks));
-                            }
-                            while (bytesToRead != 0);
-
-                            // Output the entire messsage when done.
-                            string msg = sb.ToString().Trim();
-                            Console.WriteLine(msg);
-
-                            // Close connection if instructed to.
-                            if (msg.Contains("close"))
-                            {
-                                done = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                    }
-                }
+                /*-----------------------------------------------------------------------
+                 * Close Tcp Listener
+                 * --------------------------------------------------------------------*/
+                server.Stop();
+                Console.WriteLine("Server closed...");
+                Console.ReadKey();
             }
-
-
-            /*-----------------------------------------------------------------------
-             * Close Tcp Listener
-             * --------------------------------------------------------------------*/
-            server.Stop();
-            Console.WriteLine("Server closed...");
-            Console.ReadKey();
         }
     }
 }

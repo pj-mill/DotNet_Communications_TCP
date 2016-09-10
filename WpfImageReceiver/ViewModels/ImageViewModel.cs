@@ -74,8 +74,10 @@ namespace WpfImageReceiver.ViewModels
                 listener = new TcpListener(IPAddress.Parse(LocalIPAddress), 36999);
                 listener.Start();
                 skt = listener.AcceptSocket();
-                var network = new NetworkStream(skt);
-                ReceiverImage = Image.FromStream(network);
+                using (var network = new NetworkStream(skt))
+                {
+                    ReceiverImage = Image.FromStream(network);
+                }
                 listener.Stop();
                 if (skt.Connected)
                 {

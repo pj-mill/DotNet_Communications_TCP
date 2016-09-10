@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfImageReceiver", "WpfImag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCommon", "WpfCommon\WpfCommon.csproj", "{0436D313-FF13-4B66-BFF8-BBD5372BD782}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveRespondServer", "ReceiveRespondServer\ReceiveRespondServer.csproj", "{370A1508-3F05-480C-A23E-FD53B10066E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveRespondClient", "ReceiveRespondClient\ReceiveRespondClient.csproj", "{A969AA55-67D8-4A48-888D-8FB162F22F26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{0436D313-FF13-4B66-BFF8-BBD5372BD782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0436D313-FF13-4B66-BFF8-BBD5372BD782}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0436D313-FF13-4B66-BFF8-BBD5372BD782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370A1508-3F05-480C-A23E-FD53B10066E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370A1508-3F05-480C-A23E-FD53B10066E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370A1508-3F05-480C-A23E-FD53B10066E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370A1508-3F05-480C-A23E-FD53B10066E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A969AA55-67D8-4A48-888D-8FB162F22F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A969AA55-67D8-4A48-888D-8FB162F22F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A969AA55-67D8-4A48-888D-8FB162F22F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A969AA55-67D8-4A48-888D-8FB162F22F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

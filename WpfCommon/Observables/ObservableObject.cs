@@ -76,6 +76,5 @@ namespace WpfCommon.Observables
             }
         }
         #endregion
-
     }
 }
