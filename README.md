@@ -15,6 +15,9 @@ The console apps simply demonstrate sending text from TcpClient to TcpListener. 
 |----------|-------------|
 |[BasicClient](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/BasicClient/Program.cs)|[BasicServer](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/BasicServer/Program.cs)|
 
+
+####ReceiveRespond Apps are the same as above except a response is sent to the client
+
 ---
 
 ####Wpf Apps
