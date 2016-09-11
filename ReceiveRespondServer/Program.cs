@@ -22,7 +22,7 @@ namespace ReceiveRespondServer
              * Vars
              * --------------------------------------------------------------------*/
             TcpListener server = null;
-            TcpClient client;
+            TcpClient client = null;
             NetworkStream stream = null;
             IPAddress localhost = IPAddress.Parse("127.0.0.1");
             int port = 43000;
@@ -68,10 +68,9 @@ namespace ReceiveRespondServer
                                 var msg = Encoding.UTF8.GetString(receivedBytes, 0, numberOfBytesRead);
                                 sb.Append(msg);
 
-
+                                // Respond (when message fully received)
                                 if (numberOfBytesRead < bytesToRead)
                                 {
-                                    // Respond
                                     if (msg.Equals("close"))
                                     {
                                         response = Encoding.UTF8.GetBytes("Good Bye from Server !!!");
@@ -83,7 +82,6 @@ namespace ReceiveRespondServer
                                     }
                                     stream.Write(response, 0, response.Length);
                                 }
-
                             }
                             // Output message
                             Console.WriteLine(sb.ToString());
