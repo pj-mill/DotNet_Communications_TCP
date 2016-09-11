@@ -45,6 +45,8 @@ The WPF apps allow you to open an image using 'OpenFileDialog' and display it on
 |Title|Author|Website|
 |-----|------|-------|
 |[Using TCP Services](https://msdn.microsoft.com/en-us/library/k8azesy5(v=vs.110).aspx)||MSDN|
+|[TcpClient Class](https://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient(v=vs.110).aspx)| | MSDN|
+|[TcpListener Class](https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener(v=vs.110).aspx)| | MSDN|
 |[TCP level communication with C# .NET: the server](https://dotnetcodr.com/2016/03/02/tcp-level-communication-with-c-net-the-server/)|Andras Nemes|dotnetcodr.com|
 |[TCP level communication with C# .NET: the client](https://dotnetcodr.com/2016/03/10/tcp-level-communication-with-c-net-the-client/)|Andras Nemes|dotnetcodr.com|
 |[How to give System.Drawing.Image data to System.Windows.Media.ImageSource (WPF) to display?](https://social.msdn.microsoft.com/Forums/vstudio/en-US/833ca60f-6a11-4836-bb2b-ef779dfe3ff0/how-to-give-systemdrawingimage-data-to-systemwindowsmediaimagesource-wpf-to-display?forum=wpf)| | Visual Studio Forum |
