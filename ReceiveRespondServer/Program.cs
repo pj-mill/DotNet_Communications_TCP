@@ -26,8 +26,9 @@ namespace ReceiveRespondServer
             NetworkStream stream = null;
             IPAddress localhost = IPAddress.Parse("127.0.0.1");
             int port = 43000;
-            int bytesRead = 0;
-            byte[] bytesToRead = new byte[1024]; // Buffer for reading data
+            int bytesToRead = 256;
+            int numberOfBytesRead = 0;
+            byte[] receivedBytes = new byte[bytesToRead]; // Buffer for reading data
             byte[] response;
             StringBuilder sb;
             bool done = false;
@@ -58,28 +59,34 @@ namespace ReceiveRespondServer
                         using (stream = client.GetStream())
                         {
                             sb = new StringBuilder();
-                            bytesToRead = new byte[1024];
+                            receivedBytes = new byte[bytesToRead];
 
                             // Read Loop
-                            while ((bytesRead = stream.Read(bytesToRead, 0, bytesToRead.Length)) != 0)
+                            while ((numberOfBytesRead = stream.Read(receivedBytes, 0, receivedBytes.Length)) != 0)
                             {
                                 // Process message
-                                var msg = Encoding.UTF8.GetString(bytesToRead, 0, bytesRead);
+                                var msg = Encoding.UTF8.GetString(receivedBytes, 0, numberOfBytesRead);
                                 sb.Append(msg);
-                                Console.WriteLine(sb.ToString());
 
-                                // Respond
-                                if (msg.Contains("close"))
+
+                                if (numberOfBytesRead < bytesToRead)
                                 {
-                                    response = Encoding.UTF8.GetBytes("Good Bye from Server !!!");
-                                    done = true;
+                                    // Respond
+                                    if (msg.Equals("close"))
+                                    {
+                                        response = Encoding.UTF8.GetBytes("Good Bye from Server !!!");
+                                        done = true;
+                                    }
+                                    else
+                                    {
+                                        response = Encoding.UTF8.GetBytes("Hey Thanks");
+                                    }
+                                    stream.Write(response, 0, response.Length);
                                 }
-                                else
-                                {
-                                    response = Encoding.UTF8.GetBytes("Hey Thanks");
-                                }
-                                stream.Write(response, 0, response.Length);
+
                             }
+                            // Output message
+                            Console.WriteLine(sb.ToString());
                         }
                     }
                 }
