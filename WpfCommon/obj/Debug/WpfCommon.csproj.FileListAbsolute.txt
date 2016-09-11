@@ -2,4 +2,3 @@ C:\Apps\Published\CSharp_Communications_TCP\WpfCommon\bin\Debug\WpfCommon.dll
 C:\Apps\Published\CSharp_Communications_TCP\WpfCommon\bin\Debug\WpfCommon.pdb
 C:\Apps\Published\CSharp_Communications_TCP\WpfCommon\obj\Debug\WpfCommon.dll
 C:\Apps\Published\CSharp_Communications_TCP\WpfCommon\obj\Debug\WpfCommon.pdb
-C:\Apps\Published\CSharp_Communications_TCP\WpfCommon\obj\Debug\WpfCommon.csprojResolveAssemblyReference.cache

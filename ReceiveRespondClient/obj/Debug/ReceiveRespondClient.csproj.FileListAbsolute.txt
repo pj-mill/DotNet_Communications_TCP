@@ -1,0 +1,5 @@
+C:\Apps\Published\CSharp_Communications_TCP\ReceiveRespondClient\bin\Debug\ReceiveRespondClient.exe.config
+C:\Apps\Published\CSharp_Communications_TCP\ReceiveRespondClient\bin\Debug\ReceiveRespondClient.exe
+C:\Apps\Published\CSharp_Communications_TCP\ReceiveRespondClient\bin\Debug\ReceiveRespondClient.pdb
+C:\Apps\Published\CSharp_Communications_TCP\ReceiveRespondClient\obj\Debug\ReceiveRespondClient.exe
+C:\Apps\Published\CSharp_Communications_TCP\ReceiveRespondClient\obj\Debug\ReceiveRespondClient.pdb

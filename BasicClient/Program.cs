@@ -30,9 +30,9 @@ namespace BasicClient
             /*-----------------------------------------------------------------------
              * Send 3 messages (last one to close server)
              * --------------------------------------------------------------------*/
-            while (count < 3)
+            try
             {
-                try
+                while (count < 3)
                 {
                     // Pause for 1 second.
                     Thread.Sleep(1000);
@@ -57,11 +57,10 @@ namespace BasicClient
                     // Inc. counter
                     count++;
                 }
-                catch (Exception)
-                {
-                    Console.WriteLine("Unable to connect to server");
-                    return;
-                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unable to connect to server");
             }
 
 

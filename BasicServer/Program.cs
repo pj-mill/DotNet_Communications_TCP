@@ -48,47 +48,42 @@ namespace BasicServer
                 {
                     Console.WriteLine("Waiting for a connection...");
 
-                    // Socket that manages the connection to the client (blocks code execution until a client joins)
+                    // Accept requests (blocks code execution until a client joins)
                     using (client = server.AcceptTcpClient())
                     {
                         // Client joined
                         Console.WriteLine("\nConnection accepted.");
+
+                        // Get a stream object for reading and writing
                         using (stream = client.GetStream())
                         {
                             sb = new StringBuilder();
-                            try
+
+                            // Read messages in 10 byte chunks
+                            do
                             {
-                                // Read messages in 10 byte chunks
-                                do
-                                {
-                                    byte[] chunks = new byte[readByteSize];
-                                    bytesToRead = stream.Read(chunks, 0, chunks.Length);
-                                    sb.Append(Encoding.UTF8.GetString(chunks));
-                                }
-                                while (bytesToRead != 0);
-
-                                // Output the entire messsage when done.
-                                string msg = sb.ToString().Trim();
-                                Console.WriteLine(msg);
-
-                                // Close connection if instructed to.
-                                if (msg.Contains("close"))
-                                {
-                                    done = true;
-                                }
+                                byte[] chunks = new byte[readByteSize];
+                                bytesToRead = stream.Read(chunks, 0, chunks.Length);
+                                sb.Append(Encoding.UTF8.GetString(chunks));
                             }
-                            catch (Exception ex)
+                            while (bytesToRead != 0);
+
+                            // Output the entire messsage when done.
+                            string msg = sb.ToString().Trim();
+                            Console.WriteLine(msg);
+
+                            // Close connection if instructed to.
+                            if (msg.Contains("close"))
                             {
-                                Console.WriteLine(ex.Message);
+                                done = true;
                             }
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Unable to connect server");
-                return;
+                Console.WriteLine(ex.Message);
             }
             finally
             {
