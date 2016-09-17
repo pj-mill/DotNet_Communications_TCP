@@ -7,7 +7,7 @@ Developed with Visual Studio 2015 Community
 
 ---
 
-####Console Apps
+###Console Apps
 
 The console apps simply demonstrate sending text from TcpClient to TcpListener. The example sends 3 messages every second, the third instructs the listener to close.
 
@@ -15,12 +15,13 @@ The console apps simply demonstrate sending text from TcpClient to TcpListener. 
 |----------|-------------|
 |[BasicClient](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/BasicClient/Program.cs)|[BasicServer](https://github.com/Apollo013/CSharp_Communications_TCP/blob/master/BasicServer/Program.cs)|
 
+---
 
-####Receive/Respond Apps are the same as above except a response is sent to the client
+###Receive/Respond Apps are the same as above except a response is sent to the client
 
 ---
 
-####Wpf Apps
+###Wpf Apps
 
 The WPF apps allow you to open an image using 'OpenFileDialog' and display it on the 'senders' view. This view contains a 'send' button that sends the image to the receiver who then displays the image on it's view.
 
