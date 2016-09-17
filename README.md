@@ -1,5 +1,5 @@
-# CSharp_Communications_TCP
-Demonstrates Tcp communications using TcpListener &amp; TcpClient classes
+#DotNet_Communications_TCP
+A number of console & WPF apps that demonstrates Tcp communication using TcpListener & TcpClient classes to send and receive both text and images.
 
 ---
 
