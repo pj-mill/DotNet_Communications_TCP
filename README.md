@@ -7,6 +7,14 @@ Developed with Visual Studio 2015 Community
 
 ---
 
+|Techs|
+|-----|
+|C#|
+|WPF|
+|TCP/IP|
+
+---
+
 ###Console Apps
 
 The console apps simply demonstrate sending text from TcpClient to TcpListener. The example sends 3 messages every second, the third instructs the listener to close.
