@@ -1,5 +1,5 @@
 #DotNet_Communications_TCP
-A number of console & WPF apps that demonstrates Tcp communication using TcpListener & TcpClient classes to send & receive both text and images.
+A number of console & WPF apps demonstrating Tcp communication using TcpListener & TcpClient classes to send and receive both text and images.
 
 ---
 
